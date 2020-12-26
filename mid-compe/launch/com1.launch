@@ -1,0 +1,5 @@
+<launch>
+  <node name="lo1" pkg="localization_309605004" type="lo1" output="screen"/>
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find localization_309605004)/rviz/demo1.rviz" /> 
+  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 0.04 $(find localization_309605004)/bag/sdc_localization_1.bag"/>
+</launch>
